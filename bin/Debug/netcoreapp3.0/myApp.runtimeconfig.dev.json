@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/cereal/.dotnet/store/|arch|/|tfm|",
+      "/Users/cereal/.nuget/packages"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+/Users/cereal/Desktop/myApp/bin/Debug/netcoreapp3.0/myApp
+/Users/cereal/Desktop/myApp/bin/Debug/netcoreapp3.0/myApp.deps.json
+/Users/cereal/Desktop/myApp/bin/Debug/netcoreapp3.0/myApp.runtimeconfig.json
+/Users/cereal/Desktop/myApp/bin/Debug/netcoreapp3.0/myApp.runtimeconfig.dev.json
+/Users/cereal/Desktop/myApp/bin/Debug/netcoreapp3.0/myApp.dll
+/Users/cereal/Desktop/myApp/bin/Debug/netcoreapp3.0/myApp.pdb
+/Users/cereal/Desktop/myApp/obj/Debug/netcoreapp3.0/myApp.csprojAssemblyReference.cache
+/Users/cereal/Desktop/myApp/obj/Debug/netcoreapp3.0/myApp.csproj.CoreCompileInputs.cache
+/Users/cereal/Desktop/myApp/obj/Debug/netcoreapp3.0/myApp.AssemblyInfoInputs.cache
+/Users/cereal/Desktop/myApp/obj/Debug/netcoreapp3.0/myApp.AssemblyInfo.cs
+/Users/cereal/Desktop/myApp/obj/Debug/netcoreapp3.0/myApp.dll
+/Users/cereal/Desktop/myApp/obj/Debug/netcoreapp3.0/myApp.pdb
