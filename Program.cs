@@ -36,7 +36,7 @@ namespace myApp
                 newStudent.Address = Console.ReadLine();
 
                 Console.Write("Student Phone:");
-                newStudent.Phone = int.Parse(Console.ReadLine());
+                newStudent.SetPhone = int.Parse(Console.ReadLine());
 
                 students.Add(newStudent);
 
@@ -52,14 +52,20 @@ namespace myApp
             
         }
     }
+    class Student
+    {
+        // cannot have var keyword for class variables, because blue prints need to have details defined. Type safety.
+        public string Name;
+        public int Grade;
+        public string Birthday;
+        public string Address;
+        private int Phone;
+
+        public void SetPhone(int number)
+        {
+            Phone = number;
+        }
+
+    }
 }
 
-class Student
-{
-    public string Name;
-    public int Grade;
-    public string Birthday;
-    public string Address;
-    public int Phone;
-
-}
