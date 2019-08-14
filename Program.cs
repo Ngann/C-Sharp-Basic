@@ -59,11 +59,11 @@ namespace myApp
         public int Grade;
         public string Birthday;
         public string Address;
-        private int Phone;
+        private int phone;
 
         public void SetPhone(int number)
         {
-            Phone = number;
+            phone = number;
         }
 
     }
