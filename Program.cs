@@ -25,7 +25,11 @@ namespace myApp
 
 
                 newStudent.Name = Util.Console.Ask("Student Name:");
-                int.TryParse(Util.Console.Ask("Student Name:"), out newStudent.Grade);
+                var result = int.TryParse(Util.Console.Ask("Student Name:"), out newStudent.Grade);
+                if (!result)
+                {
+                    Console.WriteLine("please enter an int");
+                }
                 newStudent.Birthday = Util.Console.Ask("Student Birthday:");
                 newStudent.Address = Util.Console.Ask("Student Address:");
                 newStudent.Phone = int.Parse(Util.Console.Ask("Student Phone:"));
