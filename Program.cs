@@ -23,22 +23,18 @@ namespace myApp
             {
                 var newStudent = new Student();
 
-                Console.Write("Student Name:");
-                newStudent.Name = Console.ReadLine();
+                
+                newStudent.Name = Util.Console.Ask("Student Name:");
+                newStudent.Grade = int.Parse(Util.Console.Ask("Student Name:"));
+                newStudent.Birthday = Util.Console.Ask("Student Birthday:");
+                newStudent.Address = Util.Console.Ask("Student Address:");
 
-                Console.Write("Student Grade:");
-                newStudent.Grade = int.Parse(Console.ReadLine());
-
-                Console.Write("Student Birthday:");
-                newStudent.Birthday = Console.ReadLine();
-
-                Console.Write("Student Address:");
-                newStudent.Address = Console.ReadLine();
-
-                Console.Write("Student Phone:");
-                newStudent.SetPhone = int.Parse(Console.ReadLine());
+                
+                newStudent.Phone = int.Parse(Util.Console.Ask("Student Phone:"));
 
                 students.Add(newStudent);
+                Student.Count++;
+                Console.WriteLine("Student Count:{0}", Student.Count);
 
                 Console.WriteLine("Add another? y/n");
 
@@ -54,12 +50,20 @@ namespace myApp
     }
     class Student
     {
+        static public int Count = 0;
         // cannot have var keyword for class variables, because blue prints need to have details defined. Type safety.
+        //fields
         public string Name;
         public int Grade;
         public string Birthday;
         public string Address;
         private int phone;
+
+        // properties
+        public int Phone
+        {
+            set { phone = value;}
+        }
 
         public void SetPhone(int number)
         {
@@ -69,3 +73,14 @@ namespace myApp
     }
 }
 
+namespace Util
+{
+    class Console
+    {
+        static public string Ask(string question)
+        {
+            System.Console.Write(question);
+            return System.Console.ReadLine();
+        }
+    }
+}
