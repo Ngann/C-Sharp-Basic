@@ -12,20 +12,20 @@ namespace myApp
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
 
             // Import(); test if the import function works.
             var students = new List<Student>();
 
             var adding = true;
 
-            while(adding)
+            while (adding)
             {
                 var newStudent = new Student();
 
-                
+
                 newStudent.Name = Util.Console.Ask("Student Name:");
-                newStudent.Grade = int.Parse(Util.Console.Ask("Student Name:"));
+                int.TryParse(Util.Console.Ask("Student Name:"), out newStudent.Grade);
                 newStudent.Birthday = Util.Console.Ask("Student Birthday:");
                 newStudent.Address = Util.Console.Ask("Student Address:");
                 newStudent.Phone = int.Parse(Util.Console.Ask("Student Phone:"));
@@ -36,8 +36,8 @@ namespace myApp
 
                 Console.WriteLine("Add another? y/n");
 
-                if(Console.ReadLine() != "y");
-                    adding = false;
+                if (Console.ReadLine() != "y") ;
+                adding = false;
             }
             foreach (var student in students)
             {
@@ -46,63 +46,50 @@ namespace myApp
         }
         static void Import()
         {
-            var importedStudent = new Student("jenny", 86, "birthday", "address" , 2344);
+            var importedStudent = new Student("jenny", 86, "birthday", "address", 2344);
             Console.WriteLine(importedStudent.Name);
 
         }
     }
 
-class Member
-{
-    public string Name;
-    public string Address;
-    protected int phone;
-
-    public int Phone
+   class Member
     {
-        set { phone = value; }
+        public string Name;
+        public string Address;
+        protected int phone;
+
+        public int Phone
+        {
+            set { phone = value; }
+        }
     }
-    }
-class Student : Member
+
+    class Student : Member
     {
         static public int Count = 0;
-        // cannot have var keyword for class variables, because blue prints need to have details defined. Type safety.
-        //fields
+
         public int Grade;
         public string Birthday;
 
-        // constructor, how can you have two constructor with the same name?!!!!
         public Student()
         {
 
         }
 
-        // constructor
         public Student(string name, int grade, string birthday, string address, int phone)
         {
-            // Console.WriteLine("constructor");
             Name = name;
             Grade = grade;
             Birthday = birthday;
-            Address =address;
+            Address = address;
             Phone = phone;
         }
-        // properties
-        public int Phone
-        {
-            set { phone = value;}
-        }
-
     }
 
-class Teacher : Member
-{
-    public string Subject;
-    public int Phone
-    {
-        set { phone = value;}
-    }
-}
+    // class Teacher : Member
+    // {
+    //     public string Subject;
+    // }
 
 }
 
