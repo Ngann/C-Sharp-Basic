@@ -56,19 +56,20 @@ class Member
 {
     public string Name;
     public string Address;
-    private int phone;
+    protected int phone;
 
-}
-class Student
+    public int Phone
+    {
+        set { phone = value; }
+    }
+    }
+class Student : Member
     {
         static public int Count = 0;
         // cannot have var keyword for class variables, because blue prints need to have details defined. Type safety.
         //fields
-        public string Name;
         public int Grade;
         public string Birthday;
-        public string Address;
-        private int phone;
 
         // constructor, how can you have two constructor with the same name?!!!!
         public Student()
@@ -92,21 +93,19 @@ class Student
             set { phone = value;}
         }
 
-        public void SetPhone(int number)
-        {
-            phone = number;
-        }
+    }
 
+class Teacher : Member
+{
+    public string Subject;
+    public int Phone
+    {
+        set { phone = value;}
     }
 }
 
-class Teacher
-{
-    public string Name;
-    public string Address;
-    private int Phone;
-    public string Subject;
 }
+
 
 namespace Util
 {
